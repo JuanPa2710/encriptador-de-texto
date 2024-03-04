@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="styles/style.css">
+
+    <!-- Fuente "Inter" - Eje Completo, peso de 100 a 900" -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+
+    <title>Encriptador de texto</title>
+</head>
+
+<body>
+    <div class="container">
+        <!-- Encabezado de la página -->
+        <header>
+            <a href="https://www.aluracursos.com/" target="_blank"><img class="logo-alura" src="images/logo-alura.png" alt="logo alura" title="Logo de Alura LATAM"></a>
+        </header>
+
+
+        <main>
+            <section class="container-input-text">
+                <div class="container-input">                    
+                    <textarea id="input" class="input" placeholder="Ingrese el texto aquí" maxlength="536" oninput="check()"></textarea>
+                    <div class="limits"></div>
+                </div>
+
+                <div class="message">
+                    <img src="images/signo-informacion.svg" alt="Icono de recomendación">
+                    <p>Solo letras minúsculas y sin acentos</p>
+                </div>
+
+                <div class="container-buttons">
+                    <button type="submit" id="btn-encrypt" class="btn-encrypt" title="Botón de encriptar texto" onclick="encriptarTexto();">Encriptar</button>
+                    <button id="btn-decrypt" class="btn-decrypt" title="Botón de desencriptar texto" onclick="desencriptarTexto();">Desencriptar</button>
+                    <button id="btn-clean" class="btn-clean" title="Botón de limpiar texto" onclick="restablecerValores();">Limpiar</button>
+                </div>
+            </section>
+
+            <section class="container-output-text">
+                <div class="container-output">
+                    <div id="empty-input" class="empty-input">
+                        <img src="/images/Muñeco.png" alt="No hay texto para mostrar">
+
+                        <h2>Ningún mensaje fue encontrado</h2>
+                        <p>Ingrese el texto que desees encriptar o desencriptar.</p>
+                    </div>
+
+                    <div id="result-input" class="result-input">
+                        <textarea id="output" class="output" maxlength="536"></textarea>
+                        <button id="btn-copy" class="btn-copy" title="Botón para copiar el texto" onclick="copiarTexto();">Copiar</button>
+                    </div>
+                </div>
+            </section>
+        </main>  
+
+        <div clas="whitespace">
+
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy Creado por Juan Pablo Jiménez - 2024</p>    
+    </footer>
+
+    <script src="scripts/app.js"></script>
+</body>
+
+</html>
