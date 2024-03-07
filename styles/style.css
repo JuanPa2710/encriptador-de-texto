@@ -261,9 +261,14 @@ footer p {
 
 /* Media querie de Tablet */
 @media (max-width: 768px) { 
+    body {
+        height: auto;
+    }
+
     .container {
         height: auto;
         padding-bottom: 42px;
+        margin: 40px 0;
     }
 
     header {
@@ -286,6 +291,10 @@ footer p {
     }
 
     .btn-copy {
+        margin-bottom: 20px;
+    }
+
+    footer {
         margin-bottom: 20px;
     }
 }
